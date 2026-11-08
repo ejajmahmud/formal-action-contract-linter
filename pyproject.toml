@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "formal-action-contract-linter"
+version = "0.1.0"
+description = "Static analysis linter checking agent tool definition schemas against formal API contracts and interface typing specs"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+    {name = "Ejaj Mahmud", email = "dev@ejajmahmud.com"}
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+dependencies = []
+
+[project.scripts]
+formal-action-contract-linter = "formal_action_contract_linter.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["formal_action_contract_linter*"]
